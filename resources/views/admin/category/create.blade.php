@@ -40,7 +40,7 @@
                                     <h3 class="text-center">Pay Invoice</h3>
                                 </div>
                                 <hr>
-                                <form action="" method="post" novalidate="novalidate">
+                                {!! Form::open(['method' => 'post']) !!}
                                     <div class="form-group text-center">
                                         <ul class="list-inline">
                                             <li class="list-inline-item"><i class="text-muted fa fa-cc-visa fa-2x"></i></li>
@@ -49,10 +49,10 @@
                                             <li class="list-inline-item"><i class="fa fa-cc-discover fa-2x"></i></li>
                                         </ul>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="cc-payment" class="control-label mb-1">Payment amount</label>
-                                        <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" value="100.00">
-                                    </div>
+                                <div class="form-group">
+                                    {!! Form::label('cc-payment', 'Payment amount', ['class' => 'control-label mb-1', 'id' => 'cc-payment']) !!}
+                                    {!! Form::text('cc-payment', null, ['class' => 'form-control']) !!}
+                                </div>
                                     <div class="form-group has-success">
                                         <label for="cc-name" class="control-label mb-1">Name on card</label>
                                         <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
@@ -90,7 +90,7 @@
                                             <span id="payment-button-sending" style="display:none;">Sending…</span>
                                         </button>
                                     </div>
-                                </form>
+                                {!! Form::close() !!}
                             </div>
                         </div>
 

@@ -5571,6 +5571,64 @@
         "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles"
     },
     {
+        "name": "trebol/entrust",
+        "version": "0.6",
+        "version_normalized": "0.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jromero98/entrust.git",
+            "reference": "d209a6dfb4f02ae537f345df8b6c4c9c0055406f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jromero98/entrust/zipball/d209a6dfb4f02ae537f345df8b6c4c9c0055406f",
+            "reference": "d209a6dfb4f02ae537f345df8b6c4c9c0055406f",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/cache": "^6.5",
+            "illuminate/console": "^6.5",
+            "php": "^7.2"
+        },
+        "require-dev": {
+            "illuminate/database": "^6.5",
+            "mockery/mockery": "dev-master",
+            "phpunit/phpunit": "^8.5"
+        },
+        "time": "2020-01-25T15:31:49+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "Trebol\\Entrust\\EntrustServiceProvider"
+                ],
+                "aliases": {
+                    "Entrust": "Trebol\\Entrust\\EntrustFacade"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/commands"
+            ],
+            "psr-4": {
+                "Trebol\\Entrust\\": "src/Entrust/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jorge Romero",
+                "email": "jromero@trebolcolombia.com"
+            }
+        ],
+        "description": "This package provides a flexible way to add role-based permissions to Laravel and is a fork from Zizaco/entrust"
+    },
+    {
         "name": "unisharp/laravel-filemanager",
         "version": "v2.1.0",
         "version_normalized": "2.1.0.0",

@@ -9,12 +9,13 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
-		"ckeditor/ckeditor": "4.15.0",
+        "ckeditor/ckeditor": "4.15.0",
         "fideloper/proxy": "^4.0",
+        "intervention/image": "^2.5",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
-		"intervention/image": "^2.5",
         "laravelcollective/html": "^6.2",
+        "trebol/entrust": "0.6",
         "unisharp/laravel-filemanager": "^2.1"
     },
     "require-dev": {

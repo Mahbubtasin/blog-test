@@ -49,6 +49,7 @@ class ComposerStaticInitc5515b1b07946642b8710bc988178332
         ),
         'T' => 
         array (
+            'Trebol\\Entrust\\' => 15,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
             'Tests\\' => 6,
         ),
@@ -181,6 +182,10 @@ class ComposerStaticInitc5515b1b07946642b8710bc988178332
         'UniSharp\\LaravelFilemanager\\' => 
         array (
             0 => __DIR__ . '/..' . '/unisharp/laravel-filemanager/src',
+        ),
+        'Trebol\\Entrust\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/trebol/entrust/src/Entrust',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -456,6 +461,7 @@ class ComposerStaticInitc5515b1b07946642b8710bc988178332
         'App\\Http\\Controllers\\CreateController' => __DIR__ . '/../..' . '/app/Http/Controllers/CreateController.php',
         'App\\Http\\Controllers\\DetailsPageController' => __DIR__ . '/../..' . '/app/Http/Controllers/DetailsPageController.php',
         'App\\Http\\Controllers\\EditController' => __DIR__ . '/../..' . '/app/Http/Controllers/EditController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\HomePageController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomePageController.php',
         'App\\Http\\Controllers\\ListingPageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ListingPageController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -4634,6 +4640,21 @@ class ComposerStaticInitc5515b1b07946642b8710bc988178332
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'Trebol\\Entrust\\Contracts\\EntrustPermissionInterface' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Contracts/EntrustPermissionInterface.php',
+        'Trebol\\Entrust\\Contracts\\EntrustRoleInterface' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Contracts/EntrustRoleInterface.php',
+        'Trebol\\Entrust\\Contracts\\EntrustUserInterface' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Contracts/EntrustUserInterface.php',
+        'Trebol\\Entrust\\Entrust' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Entrust.php',
+        'Trebol\\Entrust\\EntrustFacade' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/EntrustFacade.php',
+        'Trebol\\Entrust\\EntrustPermission' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/EntrustPermission.php',
+        'Trebol\\Entrust\\EntrustRole' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/EntrustRole.php',
+        'Trebol\\Entrust\\EntrustServiceProvider' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/EntrustServiceProvider.php',
+        'Trebol\\Entrust\\Middleware\\EntrustAbility' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Middleware/EntrustAbility.php',
+        'Trebol\\Entrust\\Middleware\\EntrustPermission' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Middleware/EntrustPermission.php',
+        'Trebol\\Entrust\\Middleware\\EntrustRole' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Middleware/EntrustRole.php',
+        'Trebol\\Entrust\\MigrationCommand' => __DIR__ . '/..' . '/trebol/entrust/src/commands/MigrationCommand.php',
+        'Trebol\\Entrust\\Traits\\EntrustPermissionTrait' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Traits/EntrustPermissionTrait.php',
+        'Trebol\\Entrust\\Traits\\EntrustRoleTrait' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Traits/EntrustRoleTrait.php',
+        'Trebol\\Entrust\\Traits\\EntrustUserTrait' => __DIR__ . '/..' . '/trebol/entrust/src/Entrust/Traits/EntrustUserTrait.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'UniSharp\\LaravelFilemanager\\Controllers\\Controller' => __DIR__ . '/..' . '/unisharp/laravel-filemanager/src/Controllers/Controller.php',

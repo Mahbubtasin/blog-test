@@ -23,11 +23,12 @@ Route::get('/list', 'ListingPageController@index');
 
 Route::get('/details', 'DetailsPageController@index');
 
-Route::group(['prefix' => 'back'], function () {
+Route::group(['prefix' => 'back', 'middleware' => 'auth'], function () {
     Route::get('/', 'AdminPageController@index');
     Route::get('/category', 'CategoriesController@index');
     Route::get('/create', 'CreateController@index');
     Route::get('/edit', 'EditController@index');
+    Route::resource('/permission', 'PermissionController');
 });
 
 //Route::get('/adminpage', 'AdminPageController@index');
