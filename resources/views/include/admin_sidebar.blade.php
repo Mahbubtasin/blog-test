@@ -22,6 +22,9 @@
                 <li>
                     <a href="{{route('permission.index')}}"> <i class="menu-icon fa fa-laptop"></i>Permission</a>
                 </li>
+                <li>
+                    <a href="{{route('role.index')}}"> <i class="menu-icon fa fa-laptop"></i>Role</a>
+                </li>
                 <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Components</a>

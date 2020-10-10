@@ -29,6 +29,7 @@ Route::group(['prefix' => 'back', 'middleware' => 'auth'], function () {
     Route::get('/create', 'CreateController@index');
     Route::get('/edit', 'EditController@index');
     Route::resource('/permission', 'PermissionController');
+    Route::resource('/role', 'RoleController');
 });
 
 //Route::get('/adminpage', 'AdminPageController@index');

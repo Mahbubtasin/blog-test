@@ -11,6 +11,8 @@
 <script src="{{asset('admin/js/lib/vector-map/jquery.vmap.min.js')}}"></script>
 <script src="{{asset('admin/js/lib/vector-map/jquery.vmap.sampledata.js')}}"></script>
 <script src="{{asset('admin/js/lib/vector-map/country/jquery.vmap.world.js')}}"></script>
+<script src="{{asset('admin/js/lib/chosen/chosen.jquery.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 <script>
     ( function ( $ ) {
         "use strict";
