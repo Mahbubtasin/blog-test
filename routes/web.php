@@ -25,11 +25,13 @@ Route::get('/details', 'DetailsPageController@index');
 
 Route::group(['prefix' => 'back', 'middleware' => 'auth'], function () {
     Route::get('/', 'AdminPageController@index');
-    Route::get('/category', 'CategoriesController@index');
+    Route::resource('/category', 'CategoryController', ['middleware' => 'permission:Category List|All']);
+    Route::put('/category/status/{id}', 'CategoryController@status', ['middleware' => 'permission:Category List|All']);
     Route::get('/create', 'CreateController@index');
     Route::get('/edit', 'EditController@index');
-    Route::resource('/permission', 'PermissionController');
+    Route::resource('/permission', 'PermissionController', ['middleware' => 'permission:Permission List|All']);
     Route::resource('/role', 'RoleController');
+    Route::resource('/author', 'AuthorController');
 });
 
 //Route::get('/adminpage', 'AdminPageController@index');

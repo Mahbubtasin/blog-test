@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Permission;
+use App\Category;
 use Illuminate\Http\Request;
 
-class PermissionController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class PermissionController extends Controller
     public function index()
     {
         //
-        $data = Permission::all();
+        $data = Category::all();
 
-        return view('admin.permission.list', compact('data'));
+        return view('admin.category.list', compact('data'));
     }
 
     /**
@@ -28,7 +28,7 @@ class PermissionController extends Controller
     public function create()
     {
         //
-        return view('admin.permission.create');
+        return view('admin.category.create');
     }
 
     /**
@@ -40,13 +40,14 @@ class PermissionController extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate($request, ['name' => 'required'], ['name.required' => 'Name Required', 'name.alpha_num' => 'required']);
-
-        $permission = $request->all();
-
-        Permission::create($permission);
-
-        return redirect('back/permission')->with('success', "Permission Created Successfully");
+        $this->validate($request,[
+           'name' => 'required'
+        ]);
+        $category = new Category();
+        $category->name = $request->name;
+        $category->status = 1;
+        $category->save();
+        return redirect('back/category')->with('success', "Category Created Successfully");
     }
 
     /**
@@ -69,9 +70,10 @@ class PermissionController extends Controller
     public function edit($id)
     {
         //
-        $permission = Permission::find($id);
+        $category = Category::find($id);
 
-        return view('admin.permission.edit', compact('permission'));
+        return view('admin.category.edit', compact('category'));
+
     }
 
     /**
@@ -84,15 +86,13 @@ class PermissionController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $this->validate($request, ['name' => 'required|alpha_num'], ['name.required' => 'Name Required', 'name.alpha_num' => 'required']);
-
-        $permission = Permission::find($id);
-
-        $update = $request->all();
-
-        $permission->update($update);
-
-        return redirect('back/permission')->with('success', "Permission Updated Successfully");
+        $this->validate($request,[
+            'name' => 'required'
+        ]);
+        $category = Category::find($id);
+        $category->name = $request->name;
+        $category->save();
+        return redirect('back/category')->with('success', "Category Updated Successfully");
     }
 
     /**
@@ -104,8 +104,25 @@ class PermissionController extends Controller
     public function destroy($id)
     {
         //
-        Permission::find($id)->delete();
+        $category = Category::find($id);
 
-        return redirect()->back()->with('success', "Permission Delete Successfully");
+        $category->delete();
+
+        return redirect('back/category')->with('success', "Category Deleted Successfully");
+    }
+
+    public function status($id)
+    {
+        $category = Category::find($id);
+        if ($category->status === 1)
+        {
+            $category->status = 0;
+        }
+        else
+        {
+            $category->status = 1;
+        }
+        $category->save();
+        return redirect('back/category')->with('success', "Category Status Successfully");
     }
 }

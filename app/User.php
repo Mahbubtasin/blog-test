@@ -5,10 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Trebol\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, EntrustUserTrait;
 
     /**
      * The attributes that are mass assignable.
